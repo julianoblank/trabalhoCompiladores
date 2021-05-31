@@ -41,7 +41,7 @@ public class TrabalhoCompiladores {
             //criando o parser passando o scanner
             Scanner scanner = new Scanner(new FileReader("entrada.txt"));
             Parser parser = new Parser(scanner);        
-            parser.parse();
+            parser.parse(); 
         }
         catch(Exception e) { System.out.println(e.getMessage());}
     }
