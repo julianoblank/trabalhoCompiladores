@@ -23,6 +23,7 @@ eofval: especifica um valor de retorno no final do arquivo
 	return new Symbol(Tokens.EOF,new String("Fim do arquivo"));
 %eofval}
 
+um = [um]
 digito = [0-9]
 letra = [a-zA-Z]
 id = {letra}({letra}|{digito}|"_")*
@@ -30,6 +31,7 @@ espaco = \t|\f|" "|\r|\n
 
 %%
 
+"um"		{return new Symbol(Tokens.UM, yytext());}
 ";"			{return new Symbol(Tokens.SEMI, yytext());}
 "="			{return new Symbol(Tokens.ATRIB, yytext());}
 "-"			{return new Symbol(Tokens.MENOS, yytext());}

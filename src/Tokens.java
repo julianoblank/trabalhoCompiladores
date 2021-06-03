@@ -7,11 +7,12 @@
 public class Tokens {
   /* terminals */
   public static final int MAIS = 3;
+  public static final int UM = 11;
   public static final int MENOS = 4;
   public static final int SEMI = 2;
   public static final int EOF = 0;
   public static final int VEZES = 5;
-  public static final int NUMERO = 11;
+  public static final int NUMERO = 12;
   public static final int ID = 9;
   public static final int error = 1;
   public static final int RPAREN = 8;
@@ -30,6 +31,7 @@ public class Tokens {
   "RPAREN",
   "ID",
   "ATRIB",
+  "UM",
   "NUMERO"
   };
 }

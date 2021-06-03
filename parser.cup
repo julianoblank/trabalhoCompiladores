@@ -15,7 +15,7 @@ init with {:  :};
 scan with {: return s.next_token(); :};
 
 /* Terminais (tokens retornados pelo scanner). */
-terminal            SEMI, MAIS, MENOS, VEZES, MENOSUNIT, LPAREN, RPAREN, ID, ATRIB;
+terminal            SEMI, MAIS, MENOS, VEZES, MENOSUNIT, LPAREN, RPAREN, ID, ATRIB, UM;
 terminal Integer    NUMERO;        
 
 /* Não terminais */
@@ -50,5 +50,6 @@ exp ::=   exp:e1 MAIS  exp:e2        {: RESULT = e1+e2;                :}
         | LPAREN exp:e RPAREN	     {: RESULT = e;                    :}
         | NUMERO:n                   {: RESULT = n;                    :}
         | ID:i	                     {: RESULT = simbolos.get(i);      :}
+		| UM:um	                     {: RESULT = 1;      :}
         | ID:i ATRIB exp:e           {: simbolos.put(i.toString(), e);  :}
 ;
