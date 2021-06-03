@@ -6,7 +6,6 @@
 /** CUP generated class containing symbol constants. */
 public class Tokens {
   /* terminals */
-  public static final int MAIS = 3;
   public static final int UM = 11;
   public static final int MENOS = 4;
   public static final int SEMI = 2;
@@ -17,13 +16,14 @@ public class Tokens {
   public static final int error = 1;
   public static final int RPAREN = 8;
   public static final int LPAREN = 7;
+  public static final int SOMA = 3;
   public static final int MENOSUNIT = 6;
   public static final int ATRIB = 10;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
   "SEMI",
-  "MAIS",
+  "SOMA",
   "MENOS",
   "VEZES",
   "MENOSUNIT",

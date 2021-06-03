@@ -36,7 +36,7 @@ public class TrabalhoCompiladores {
             while(s.sym != Tokens.EOF){
                 System.out.printf("<%d, %s>\n", s.sym, s.value);
                 s = scanner.next_token();
-            }*/
+            }//*/
             
             //criando o parser passando o scanner
             Scanner scanner = new Scanner(new FileReader("entrada.txt"));
