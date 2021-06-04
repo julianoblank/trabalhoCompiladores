@@ -1,1 +1,4 @@
-um mais um;
+quanto e tres vezes dois;
+quanto e nove menos dois;
+quanto e dobro de (nove vezes dois);
+quanto e oito divido por dois;

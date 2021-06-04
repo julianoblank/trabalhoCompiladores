@@ -22,7 +22,7 @@ public class TrabalhoCompiladores {
             Process p;            
             //posicionando na pasta src e chamar o flex por linha de comando
             //vai gerar a classe Scanner.java
-           /* p = r.exec(new String[]{"java", "-jar", "..\\jflex-full-1.8.2.jar", "..\\scanner.flex"}, null, new File("src\\"));
+            /*p = r.exec(new String[]{"java", "-jar", "..\\jflex-full-1.8.2.jar", "..\\scanner.flex"}, null, new File("src\\"));
             System.out.println(p.waitFor());//se ok, a saída será 0*/
             
             //vai gerar as classes Parser.java e Tokens.java
@@ -30,7 +30,7 @@ public class TrabalhoCompiladores {
             System.out.println(p.waitFor());//se ok, a saída será 0*/
             
             
-           /* Scanner scanner = new Scanner(new FileReader("entrada.txt"));
+            /*Scanner scanner = new Scanner(new FileReader("entrada.txt"));
             System.out.println("Análise Léxica: Lista de Tokens:");
             Symbol s = scanner.next_token();
             while(s.sym != Tokens.EOF){

@@ -15,7 +15,7 @@ init with {:  :};
 scan with {: return s.next_token(); :};
 
 /* Terminais (tokens retornados pelo scanner). */
-terminal            SEMI, SOMA, MENOS, VEZES, MENOSUNIT, LPAREN, RPAREN, ID, ATRIB, UM;
+terminal            SEMI, SOMA, MENOS, VEZES, DIVIDIDO, MENOSUNIT, LPAREN, RPAREN, ID, ATRIB, DOBRO, UM, DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE;
 terminal Integer    NUMERO;        
 
 /* Não terminais */
@@ -23,7 +23,7 @@ non terminal            inicio;
 non terminal Integer    exp;      // utilizado para armazenar as subexpressões avaliadas
 
 /* Precedência de operadores */
-precedence left SOMA, MENOS;
+precedence left SOMA, MENOS, DIVIDIDO;
 precedence left VEZES;
 
 /* Regras da Gramática 
@@ -46,10 +46,20 @@ inicio ::=   inicio exp:e SEMI       {: System.out.println(e);         :}
 exp ::=   exp:e1 SOMA  exp:e2        {: RESULT = e1+e2;                :}
         | exp:e1 MENOS exp:e2        {: RESULT = e1-e2;                :}
         | exp:e1 VEZES exp:e2        {: RESULT = e1*e2;                :}
+		| exp:e1 DIVIDIDO exp:e2     {: RESULT = e1 / e2;                :}
         | MENOS exp:e                {: RESULT = -e;                   :}
         | LPAREN exp:e RPAREN	     {: RESULT = e;                    :}
         | NUMERO:n                   {: RESULT = n;                    :}
         | ID:i	                     {: RESULT = simbolos.get(i);      :}
 		| UM:um	                     {: RESULT = 1;      :}
+		| DOIS:dois	                 {: RESULT = 2;      :}
+		| TRES:tres	                 {: RESULT = 3;      :}
+		| QUATRO:quatro	             {: RESULT = 4;      :}
+		| CINCO:cinco	             {: RESULT = 5;      :}
+		| SEIS:seis	                 {: RESULT = 6;      :}
+		| SETE:sete	                 {: RESULT = 7;      :}
+		| OITO:oito	                 {: RESULT = 8;      :}
+		| NOVE:nove	                 {: RESULT = 9;      :}
+		| DOBRO exp:e	             {: RESULT = e+e;      :}
         | ID:i ATRIB exp:e           {: simbolos.put(i.toString(), e);  :}
 ;

@@ -6,19 +6,29 @@
 /** CUP generated class containing symbol constants. */
 public class Tokens {
   /* terminals */
-  public static final int UM = 11;
+  public static final int OITO = 20;
   public static final int MENOS = 4;
+  public static final int NOVE = 21;
+  public static final int RPAREN = 9;
   public static final int SEMI = 2;
+  public static final int DIVIDIDO = 6;
+  public static final int UM = 13;
+  public static final int LPAREN = 8;
+  public static final int ID = 10;
+  public static final int ATRIB = 11;
+  public static final int DOBRO = 12;
+  public static final int CINCO = 17;
   public static final int EOF = 0;
-  public static final int VEZES = 5;
-  public static final int NUMERO = 12;
-  public static final int ID = 9;
+  public static final int MENOSUNIT = 7;
+  public static final int TRES = 15;
+  public static final int SEIS = 18;
+  public static final int QUATRO = 16;
+  public static final int SETE = 19;
+  public static final int NUMERO = 22;
   public static final int error = 1;
-  public static final int RPAREN = 8;
-  public static final int LPAREN = 7;
+  public static final int VEZES = 5;
   public static final int SOMA = 3;
-  public static final int MENOSUNIT = 6;
-  public static final int ATRIB = 10;
+  public static final int DOIS = 14;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
@@ -26,12 +36,22 @@ public class Tokens {
   "SOMA",
   "MENOS",
   "VEZES",
+  "DIVIDIDO",
   "MENOSUNIT",
   "LPAREN",
   "RPAREN",
   "ID",
   "ATRIB",
+  "DOBRO",
   "UM",
+  "DOIS",
+  "TRES",
+  "QUATRO",
+  "CINCO",
+  "SEIS",
+  "SETE",
+  "OITO",
+  "NOVE",
   "NUMERO"
   };
 }
