@@ -1,3 +1,7 @@
+atribuir 150 em $x;
+valor de $x;
+atribuir 200 em $y;
+valor de $y;
 quanto e tres vezes dois;
 quanto e nove menos dois;
 quanto e dobro de (nove vezes dois);

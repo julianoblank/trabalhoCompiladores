@@ -26,7 +26,7 @@ public class TrabalhoCompiladores {
             System.out.println(p.waitFor());//se ok, a saída será 0*/
             
             //vai gerar as classes Parser.java e Tokens.java
-            /*p = r.exec(new String[]{"java","-jar", "..\\java-cup-11b.jar", "-parser", "Parser", "-symbols", "Tokens", "..\\parser.cup"}, null, new File("src\\"));
+           /* p = r.exec(new String[]{"java","-jar", "..\\java-cup-11b.jar", "-parser", "Parser", "-symbols", "Tokens", "..\\parser.cup"}, null, new File("src\\"));
             System.out.println(p.waitFor());//se ok, a saída será 0*/
             
             
@@ -39,7 +39,7 @@ public class TrabalhoCompiladores {
             }//*/
             
             //criando o parser passando o scanner
-            Scanner scanner = new Scanner(new FileReader("entrada.txt"));
+           Scanner scanner = new Scanner(new FileReader("entrada.txt"));
             Parser parser = new Parser(scanner);        
             parser.parse(); //*/
         }

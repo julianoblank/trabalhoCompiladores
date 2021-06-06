@@ -36,7 +36,8 @@ vezes = (v[e])\w+
 dividido = (d[i])\w+
 menos = (m[e])\w+
 dobro = (d[o])\w+
-palavra = [a-zA-Z]([a-zA-Z]|\é)*
+atribuir = (a[t][r][i])\w+
+palavra = ([a-zA-Z]|\é)*
 palavraEsp = \é
 digito = [0-9]
 letra = [a-zA-Z]
@@ -58,6 +59,7 @@ espaco = \t|\f|" "|\r|\n
 {vezes}		{return new Symbol(Tokens.VEZES, yytext());}
 {dividido}  {return new Symbol(Tokens.DIVIDIDO, yytext());}
 {menos}		{return new Symbol(Tokens.MENOS, yytext());}
+{atribuir}  {return new Symbol(Tokens.ATRIB, yytext());}
 ";"			{return new Symbol(Tokens.SEMI, yytext());}
 "("			{return new Symbol(Tokens.LPAREN, yytext());}
 ")"			{return new Symbol(Tokens.RPAREN, yytext());}

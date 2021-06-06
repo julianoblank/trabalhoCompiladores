@@ -8,6 +8,7 @@ parser code {:
 
     // tabela de símbolos
     java.util.Map<String, Integer> simbolos = new java.util.HashMap<String, Integer>();
+	
 :}
 
 /* conectar esse parser ao scanner! */
@@ -61,5 +62,5 @@ exp ::=   exp:e1 SOMA  exp:e2        {: RESULT = e1+e2;                :}
 		| OITO:oito	                 {: RESULT = 8;      :}
 		| NOVE:nove	                 {: RESULT = 9;      :}
 		| DOBRO exp:e	             {: RESULT = e+e;      :}
-        | ID:i ATRIB exp:e           {: simbolos.put(i.toString(), e);  :}
+        | ATRIB exp:e ID:i           {: simbolos.put(i.toString(), e);  :}
 ;
